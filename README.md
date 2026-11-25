@@ -1,73 +1,45 @@
-# React + TypeScript + Vite
+# Muhammed Sinan R P — SOC Analyst | Cybersecurity Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 **Live Site:** [Muhammed Sinan R P — SOC Analyst | Cybersecurity Portfolio](https://muhammedsinanrp.github.io/cyber/)
 
-Currently, two official plugins are available:
+A retro-futuristic CRT/HUD-themed cybersecurity portfolio built for **Muhammed Sinan R P** (`sinan@sec`), showcasing SOC analysis, SIEM detection engineering, incident response, threat hunting, and hands-on lab architectures.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Boot Sequence & CRT HUD**: Simulated terminal boot screen, scanline overlay, and live status HUD.
+- **Interactive SOC Terminal**: Built-in CLI supporting commands like `help`, `whoami`, `skills`, `projects`, `certs`, `contact`, `hire`, `nmap`, and `spl`.
+- **360° Radar Canvas**: Real-time animated radar sweep in the hero section.
+- **Deployed Labs & Projects**: Detailed write-ups for Wazuh SIEM + Snort IDS, Splunk SOC Home Lab, Windows Forensics, and more.
+- **Skills & Certifications**: Categorized defensive/offensive arsenal and earned credentials.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework**: React 19 + TypeScript + Vite
+- **Styling**: Tailwind CSS + shadcn/ui + Lucide Icons
+- **Routing**: React Router
+- **Deployment**: GitHub Pages (via GitHub Actions)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server (http://localhost:3000)
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Deployment
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Pushing to the `main` branch automatically builds and deploys the site to GitHub Pages via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
